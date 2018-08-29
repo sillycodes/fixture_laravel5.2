@@ -22,7 +22,6 @@ restClientService.getFixture()
                         this.push(text);
                     },$scope.pointsTable);
 //                    $scope.teams = teams;
-                    console.log("teams",$scope.pointsTable);
                 },function(error){console.log("Error:", error);});
     },function(err){
         console.log("Error:", err);
@@ -40,7 +39,6 @@ restClientService.getFixture()
     };
     
     $scope.makePoints = function(){
-        console.log();
     };
 
 //getTournament()
