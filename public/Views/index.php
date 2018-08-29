@@ -12,10 +12,10 @@
         <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/js/wow/css/libs/animate.css" rel="stylesheet">
         <link href="assets/js/wordsrotator/jquery.wordrotator.min.css" rel="stylesheet">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="ngApp/lib/jquery.min.js"></script>
         <script src="ngApp/lib/angular.min.js"></script>
         <script src="ngApp/lib/angular-ui-router.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>        
+        <script src="ngApp/lib/angular-route.js"></script>        
         <script src="ngApp/lib/angular-sanitize.1.5.8.min.js"></script>
 
         <!-- CSS IMPORT FOR FONT -->
@@ -52,7 +52,7 @@
             }
 
             .template-header{
-                color:#001533;
+                color:#9ba0a7;
             }
             a{cursor: pointer;}
 
