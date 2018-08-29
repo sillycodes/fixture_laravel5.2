@@ -6,11 +6,15 @@ restClientService.getFixture()
         //get the teams also on single call.        
         restClientService.getTeams()
                 .then(function(teams){
-                    
+                    var totalMatches = $scope.fixtures.length;
+                    var total_teams = teams.data.length;
+                    var matchesPerTeam = (totalMatches/total_teams) * 2; //change logic once team fixture logic changed..
                     angular.forEach(teams.data , function(v,k){
-                         var matchesPerTeam = "";
+                         
                           var text = {
-                                team_id : v.team_code,
+                                team_id : v.team_id,
+                                team_code : v.team_code,
+                                team_matches : matchesPerTeam,
                                 team_win : $scope.team_win,
                                 team_lost :$scope.team_lost,
                                 team_points :$scope.team_points
@@ -33,6 +37,10 @@ restClientService.getFixture()
     
     $scope.saveFixture = function(){
       console.log($scope.fixture); 
+    };
+    
+    $scope.makePoints = function(){
+        console.log();
     };
 
 //getTournament()

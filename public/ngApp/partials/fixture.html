@@ -1,9 +1,9 @@
 <div class="main-content container-fluid" ng-controller="fixtureController">    
     <div class="col-lg-8">
         <h2 class="template-header">Fixture</h2>
-        <button class="btn btn-primary" type="button" ng-click="saveFixture()">
+<!--        <button class="btn btn-primary" type="button" ng-click="saveFixture()">
             Save Fixture
-        </button> 
+        </button> -->
         <div class="panel" ng-repeat="fixture in fixtures">
         <div class="panel-heading">
             <div class="row">
@@ -34,7 +34,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="user-avatar cell-detail user-info" style="width: 10%">
+                                            <td class="user-avatar cell-detail user-info" style="width: 10%" ng-click="makePoints()">
                                                 <img src="assets/img/teams/{{fixture.away_team.team_logo}}" style="width: 50px; height: 50px;" alt="Avatar">
                                             </td>
                                             <td style="width:30%; text-align: center;">{{fixture.away_team.tean_name}} <br>({{fixture.away_team.team_code}})</td>
@@ -61,9 +61,9 @@
                 
 
           <div class="box">
-            <div class="box-header">
+<!--            <div class="box-header">
               <h3 class="box-title">Points Table</h3>
-            </div>
+            </div>-->
             <!-- /.box-header -->
             <div class="box-body">
               
@@ -81,8 +81,8 @@
                 </thead>
                 <tbody ng-repeat="point in pointsTable">
                     <tr role="row" class="odd">
-                      <td class="sorting_1">{{point.team_id}}</td>
-                      <td>{{point.team_id}}</td>
+                      <td class="sorting_1">{{point.team_code}}</td>
+                      <td>{{point.team_matches}}</td>
                       <td>{{point.team_win}}</td>
                       <td>{{point.team_lost}}</td>
                       <td>{{point.team_points}}</td>
